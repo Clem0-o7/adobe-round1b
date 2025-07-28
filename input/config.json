@@ -1,0 +1,11 @@
+{
+  "persona": "Travel Planner and Tourism Expert with 8 years of experience in creating customized travel itineraries for luxury and cultural tourism. Specializes in European destinations, French culture, cuisine, and historical sites. Expert in accommodation selection, restaurant recommendations, and cultural activities.",
+  "job_to_be_done": "Create a comprehensive 7-day travel itinerary for a group of 4 food and culture enthusiasts visiting the South of France for the first time. Focus on must-visit cities, authentic local cuisine experiences, cultural attractions, and traditional festivals.",
+  "max_sections": 10,
+  "max_subsections": 10,
+  "processing_config": {
+    "top_k_retrieval": 15,
+    "min_section_length": 50,
+    "embedding_model": "distiluse-base-multilingual-cased-v1"
+  }
+}

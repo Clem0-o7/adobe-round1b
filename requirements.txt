@@ -1,0 +1,25 @@
+# Core dependencies for PDF processing
+pdfplumber==0.10.0
+
+# Machine learning and embeddings
+sentence-transformers==2.2.2
+torch>=1.9.0
+transformers>=4.21.0
+
+# FAISS for similarity search
+faiss-cpu==1.7.4
+
+# Scientific computing (included with sentence-transformers)
+numpy>=1.21.0
+
+# Text processing
+nltk==3.8.1
+
+# JSON and data handling
+jsonschema==4.17.3
+
+# System monitoring
+psutil==5.9.5
+
+# Progress bars
+tqdm>=4.64.0

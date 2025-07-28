@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  persona-rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    container_name: persona-rag-pipeline
+    volumes:
+      - ./input:/app/input:ro
+      - ./output:/app/output
+    environment:
+      - INPUT_DIR=/app/input
+      - OUTPUT_DIR=/app/output
+    network_mode: none  # No internet access as per constraints
+    mem_limit: 2g
+    cpus: '2.0'
+    restart: "no"
+    
+  # Development service with shell access
+  persona-rag-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms:
+        - linux/amd64
+    container_name: persona-rag-dev
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+      - .:/app/src  # Mount source code for development
+    environment:
+      - INPUT_DIR=/app/input
+      - OUTPUT_DIR=/app/output
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    mem_limit: 2g
+    cpus: '2.0'
